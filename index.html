@@ -21,26 +21,14 @@
     <!-- Custom styles for this template -->
     <link href="css/freelancer.css" rel="stylesheet">
 
-    <script>
-      document.getElementById('vid').play();
-      function floatUp(){
-       document.getElementById('yourHtmlTag').style.bottom = "25%";
-       document.getElementById('yourHtmlTag1').style.bottom = "15%";
-       document.getElementById('yourHtmlTag2').style.bottom = "29%";
-       document.getElementById('yourHtmlTag3').style.bottom = "21%";
-   };
-   if (document.getElementById) { 
-    document.getElementById('hidepage').style.visibility = 'hidden';
-    }
-   window.onload = floatUp;
-  </script>
-
-
   </head>
-
-  <body id="page-top" onload="floatUp()">
-
+  <body>
+      <div class="loader">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
     <!-- Navigation -->
+    <section id="page-top" class="main" onload="floatUp()">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background: #ffd519 !important;">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">oh honey</a>
@@ -57,7 +45,7 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Intro</a>
             </li>
           </ul>
         </div>
@@ -73,7 +61,7 @@
         <div class="intro-text">
           <span class="name">Kaya Taylour Pelen</span>
         </div>
-        <div id="hidepage">
+        <div id="test-content">
         <div id="test">
             <p style="font-size: 70px; font-family: 'Shrikhand', cursive;" id="yourHtmlTag">UH HUH</p>
             <p style="font-size: 80px; font-family: 'Shrikhand', cursive;" id="yourHtmlTag1">HONEY</p>
@@ -382,6 +370,31 @@
       </div>
     </div>
     
+
+    <script>  
+     const loader = document.querySelector('.loader');
+     const main = document.querySelector('.main');
+  
+        function init() {
+       setTimeout(() => {
+         loader.style.opacity = 0;
+         loader.style.display = 'none';
+  
+        main.style.display = 'block';
+         main.style.opacity = 1;
+       },4000);
+     }
+     init();
+
+       document.getElementById('vid').play();
+        function floatUp(){
+         document.getElementById('yourHtmlTag').style.bottom = "25%";
+         document.getElementById('yourHtmlTag1').style.bottom = "15%";
+         document.getElementById('yourHtmlTag2').style.bottom = "29%";
+         document.getElementById('yourHtmlTag3').style.bottom = "21%";
+     };
+     window.onload = floatUp;
+    </script>
  
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -396,6 +409,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
+  </section>
   </body>
 
 </html>
