@@ -21,6 +21,21 @@
     <!-- Custom styles for this template -->
     <link href="css/freelancer.css" rel="stylesheet">
 
+    <script>
+      document.getElementById('vid').play();
+      function floatUp(){
+       document.getElementById('yourHtmlTag').style.bottom = "25%";
+       document.getElementById('yourHtmlTag1').style.bottom = "15%";
+       document.getElementById('yourHtmlTag2').style.bottom = "29%";
+       document.getElementById('yourHtmlTag3').style.bottom = "21%";
+   };
+   if (document.getElementById) { 
+    document.getElementById('hidepage').style.visibility = 'hidden';
+    }
+   window.onload = floatUp;
+  </script>
+
+
   </head>
 
   <body id="page-top" onload="floatUp()">
@@ -58,6 +73,7 @@
         <div class="intro-text">
           <span class="name">Kaya Taylour Pelen</span>
         </div>
+        <div id="hidepage">
         <div id="test">
             <p style="font-size: 70px; font-family: 'Shrikhand', cursive;" id="yourHtmlTag">UH HUH</p>
             <p style="font-size: 80px; font-family: 'Shrikhand', cursive;" id="yourHtmlTag1">HONEY</p>
@@ -67,6 +83,7 @@
             <p style="font-size: 70px; font-family: 'Shrikhand', cursive; color: green;" id="yourHtmlTag2">UH HUH</p>
             <p style="font-size: 80px; font-family: 'Shrikhand', cursive; color: green;" id="yourHtmlTag3">HONEY</p>
           </div>
+        </div>
        </div>
       </div>
 
@@ -161,7 +178,7 @@
         </div>
           <hr id="hr-vod" class="newhr"  style="background: green !important;"/>
         <div class="row">
-            <video id="vid"  class="video-player video-player--banner" width="1122" height="950" autoplay loop  controls>
+            <video id="vid"  class="video-player video-player--banner" width="1122" height="950" loop  controls>
                 <source type="video/mp4" src="img/portfolio/kayamov.mp4"></source>
           </video>
         </div>
@@ -365,16 +382,7 @@
       </div>
     </div>
     
-    <script>
-      document.getElementById('vid').play();
-      function floatUp(){
-       document.getElementById('yourHtmlTag').style.bottom = "25%";
-       document.getElementById('yourHtmlTag1').style.bottom = "15%";
-       document.getElementById('yourHtmlTag2').style.bottom = "29%";
-       document.getElementById('yourHtmlTag3').style.bottom = "21%";
-   };
-  </script>
-
+ 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
